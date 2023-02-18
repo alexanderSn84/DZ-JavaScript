@@ -1,0 +1,39 @@
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    background-color: rgba(77, 172, 39, 0.349);
+  }
+  
+  .js__div {
+    border: 2px solid rgb(51, 17, 58);
+    padding: 16px;
+    width: 250px;
+    background-color: rgba(191, 125, 230, 0.521);
+    
+  }
+
+  .js__div:hover{
+    box-shadow: 11px 5px 5px rgba(70, 3, 133, 0.315);
+  }
+  
+  .strDrinkThumb {
+    height: 280px;
+    width: 100%;
+  }
+  
+  .idDrink {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .dateModified {
+    text-align: left;
+    color: rgba(126, 72, 6, 0.753);
+  }
+  
+  .strInstructions {
+    text-align: justify;
+    font-style: italic;
+  }

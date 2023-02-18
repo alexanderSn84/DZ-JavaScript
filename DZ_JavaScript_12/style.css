@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.player {
+    width: 640px;
+}
+
+.control {
+    width: 100%;
+    background-color: #a10b9ac2;
+    border-radius: 20px;
+}
+
+.bars-wrap {
+    width: 100%;
+    height: 15px;
+    background-color: #f36c6c;
+    border-radius: 20px;
+}
+  
+.slider {
+    height: 15px;
+    width: 0%;
+    background-color: #1cabcfc5;
+    border-radius: 20px;
+}
+
+.playerBTN {
+    margin: 5px 0 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+svg .play-pause-icon {
+    width: 35px;
+    margin: 5px 0px 5px 10px;
+    fill: #4ac718;
+}
+
+svg .volume-icon {
+    width: 35px;
+    margin: 5px 0px 5px 10px;
+    fill: #07a329;
+  }
+
+.hidden {
+    display: none;
+}
+
+

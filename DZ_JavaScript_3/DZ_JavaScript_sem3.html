@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Задание 1. Создайте функцию которая возводит переданное число в куб, необходимо вывести 
+    в консоль результат 2^3 степени + 3 ^ 3 степени -->
+    <script>
+        let a = 2;
+        let b = 3;
+
+        function pow(chislo, stepen) {
+            return chislo ** stepen;
+            
+            // let rezulatat = chislo;
+            // for (let i = 0; i < stepen - 1; i++) {
+            //     rezulatat *= chislo;
+            // }
+            // return rezulatat;
+        }
+
+        let c = pow(a, 3) + pow(b, 3);
+        console.log(c);
+    </script>
+
+
+
+
+
+    <!-- Задание 2. Пользователь вводит с клавиатуры число, если ввёл текст, необходимо вывести 
+    что значение задано неверно. Создать фукнцию, которая высчитывает 13% 
+    от данного числа и выводит в консоль текст "Размер заработной платы за вычетом 
+    налогов равен значение" -->
+    <script>
+        let dohod = prompt("Введите зарплату за месяц", "");
+        let protsent = 13;
+
+        function zarplata(num, nalog) {
+            if (isNaN(num)) {
+                return 'Задано неверно!';
+            }
+            return num - ((nalog / 100) * num);
+        }
+
+        console.log(`Размер заработной платы ${dohod} за вычетом ${protsent}% налогов равен ${zarplata(dohod, protsent)}`);
+    </script>
+
+
+
+
+
+
+
+
+
+    <!-- Задание 3. Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая 
+    определяет максимальное значение среди этих чисел -->
+    <script>
+        let a1 = prompt("Введите первое число", "");
+        let b1 = prompt("Введите второе число", "");
+        let c1 = prompt("Введите третье число", "");
+
+        function numMax(num1, num2, num3) {
+            max1 = num1;
+            if (num2 > max1) {
+                max1 = num2;
+            }
+            if (num3 > max1) {
+                max1 = num3;
+            }
+            return max1;
+        }
+
+        console.log(`Из трёх введённых чисел: ${a1}, ${b1}, ${c1}.\nМаксимальное число ${numMax(a1, b1, c1)}`);
+    </script>
+
+
+
+
+
+
+    <!-- Задание 4. Необходимо реализовать четыре функции, каждая функция должна принимать по два
+числа и выполнять одну из операций (каждая функция выполняет одну из них):
+1. Сложение
+2. Разность
+3. Умножение
+4. Деление
+Необходимо сделать так, чтобы функция вернула число, например выражение
+console.log(sum(2, 6)); должно вывести число 8 в консоль (sum - функция
+сложения в данном примере, ваши названия функций могут отличаться).
+Округлять значения, которые возвращают функции не нужно, однако, обратите
+внимание на разность, функция должна вычесть из большего числа меньшее, либо
+вернуть 0, если числа равны.
+Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
+не нужно. -->
+    <script>
+        let a2 = prompt("Введите первое число", "");
+        let b2 = prompt("Введите второе число", "");
+        let raznost;
+
+        // 1. Сложение
+        function summ(num11, num12) {
+            return num11 + num12;
+        }
+
+        // 2. Разность
+        function difference(num21, num22) {
+            if (num21 <= num22) {
+                return num22 - num21;
+            }
+            return num21 - num22;
+        }
+
+        // 3. Умножение
+        function multiplication(num31, num32) {
+            return num31 * num32;
+        }
+
+        // 4. Деление
+        function division(num41, num42) {
+            return num41 / num42;
+        }
+
+        if (a2 >= b2) {
+            raznost = `${a2} - ${b2}`;
+        }
+        else {
+            raznost = `${b2} - ${a2}`;
+        }
+
+        console.log(`Сумма числел: ${a2} + ${b2} = ${summ(a2, b2)};\n
+        Разность числел: ${raznost} = ${difference(a2, b2)};\n
+        Произведение числел: ${a2} * ${b2} = ${multiplication(a2, b2)};\n
+        Деление числел: ${a2} / ${b2} = ${division(a2, b2)}.`);
+
+    </script>
+
+
+</body>
+
+</html>

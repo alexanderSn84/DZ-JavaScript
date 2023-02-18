@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- Задание 1. 
+    Необходимо с помощью цикла for вывести следующие 11 строк в консоль:
+    0 – это ноль
+    1 – нечетное число
+    2 – четное число
+    3 – нечетное число
+    …
+    10 – четное число
+    -->
+    <script>
+      console.log(`Задание 1.\n`);
+      function arrayE(ar) {
+        return ar % 2 === 0;
+      }
+
+      for (let i = 0; i < 11; i++) {
+        if (i === 0) {
+          console.log(`${i} – это ноль`);
+        } else if (arrayE(i)) {
+          console.log(`${i} – четное число`);
+        } else {
+          console.log(`${i} – нечетное число`);
+        }
+      }
+      console.log(``);
+    </script>
+
+
+
+    <!-- Задание 2.
+    Дан массив [1, 2, 3, 4, 5, 6, 7]
+    Сделайте из этого массива следующий [1, 2, 3, 6, 7] -->
+    <script>
+      console.log(`Задание 2.\n`);
+      let arr = [1, 2, 3, 4, 5, 6, 7];
+      console.log(`${arr}`);
+      arr.splice(3, 2);
+      console.log(`${arr}`);
+      console.log(``);
+    </script>
+
+
+
+    <!-- Задание 3. 
+    Используя Math.random() вам необходимо генерировать цифры от 0 до 9, 
+    и создать массив состоящий из 5 таких элементов
+    1. Рассчитать сумму элементов этого массива
+    2. Найти минимальное число
+    3. Найти есть ли в этом массиве число 3 -->
+    <script>
+      console.log(`Задание 3.\n`);
+
+      function randomMinMax(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      let arr2 = [];
+      for (let i = 0; i < 5; i++) {
+        arr2[i] = randomMinMax(0, 9);
+      }
+      console.log(arr2);
+
+      let sum = 0;
+      for (let j = 0; j < arr2.length; j++) {
+        sum += arr2[j];
+      }
+      console.log(`Сумма числел: ${sum}`);
+
+      let min12 = Math.min(...arr2);
+      console.log(`Минимальное число: ${min12}`);
+
+      for (let k = 0; k < arr2.length; k++) {
+        if (arr2.indexOf(3) >= 0) {
+          console.log(`Есть число 3`);
+          break;
+        } else {
+          console.log(`Нет числа 3`);
+          break;
+        }
+      }
+      console.log(``);
+    </script>
+
+
+
+    <!-- Задание 4.
+    Необходимо вывести горку в консоль (используя цикл for), как показано на
+    рисунке, только у вашей горки должно быть 20 рядов, а не 5:
+    x
+    xx
+    xxx
+    xxxx
+    xxxxx
+    -->
+    <script>
+      console.log(`Задание 4.\n`);
+      for (let i = 0; i < 20; i++) {
+        let row = "";
+        for (let j = 0; j <= i; j++) {
+          row += "x";
+        }
+        console.log(row);
+      }
+    </script>
+  </body>
+</html>

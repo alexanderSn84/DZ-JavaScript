@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DZ_10</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Задание 1
+    1. Поиск в интернете (бесплатные api примеры).
+    2. Найти любые данные, на произвольную тему.
+    3. Создать файл data.js.
+    4. Создать переменную которая будет хранить данные из публичных api.
+
+    Задание 2
+    1. Создать файл index.html.
+    2. Подключить data.js.
+    3. Сформировать контент из данных (картинка загловок и параграф).
+    4. Добавить данный контент в вёрстку.
+    5. * Добавить стили при необходимости (по желанию). -->
+
+    <div class="content"></div>
+
+    <script src="data.js"></script>
+
+    <script>
+      const contentEl = document.querySelector(".content");
+
+      const data = JSON.parse(dataInfo);
+
+      data.forEach((element) => {
+        const apiEl = document.createElement("div");
+        apiEl.classList.add("js__div");
+        contentEl.appendChild(apiEl);
+
+        const idEl = document.createElement("h3");
+        idEl.classList.add("idDrink");
+        idEl.textContent = element.idDrink;
+        apiEl.appendChild(idEl);
+
+        const imgEl = document.createElement("img");
+        imgEl.classList.add("strDrinkThumb");
+        imgEl.src = element.strDrinkThumb;
+        apiEl.appendChild(imgEl);
+
+        const instructionsEl = document.createElement("p");
+        instructionsEl.classList.add("strInstructions");
+        instructionsEl.textContent = element.strInstructions;
+        apiEl.appendChild(instructionsEl);
+
+        const dateEl = document.createElement("p");
+        dateEl.classList.add("dateModified");
+        dateEl.textContent = element.dateModified;
+        apiEl.appendChild(dateEl);
+      });
+    </script>
+  </body>
+</html>
